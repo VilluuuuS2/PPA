@@ -1,0 +1,33 @@
+<Relate>
+    BoxLayout:
+        canvas.before:
+            Color:
+                rgba: 0, 255, 255, 0.5
+            Rectangle:
+                pos: self.pos
+                size: self.size
+
+        orientation: 'vertical'
+        padding: 40
+        spacing: 15
+
+        Label:
+            font_size: 30
+            font_name: "Corbell"
+            text: "Relatório"
+
+        Image:
+			source: 'grafico-pizza.png'
+			size: self.texture_size
+                    
+        BoxLayout:
+            Button:
+                background_color:(0.3, 0.8, 1, 1)
+                background: (0.3, 0.8, 1, 1)
+                font_size: 15
+                width: dp(180)
+                height: dp(50)
+                font_name: "Corbell"
+                text: "Tela Inicial"
+                on_press: 
+                    root.manager.current = 'Telainicial'

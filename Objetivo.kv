@@ -1,0 +1,62 @@
+<Objetivo>
+	BoxLayout:
+		canvas.before:
+            Color:
+                rgba: 0, 255, 255, 0.5
+			Rectangle:
+                pos: self.pos
+                size: self.size
+		orientation: 'vertical'
+		padding: 40
+		spacing: 15
+
+		Label:
+			font_size: 30
+			font_name: "Corbell"
+			text: "Objetivo"
+
+		Label:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 0.3
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			font_size: 25
+			font_name: "Corbell"
+			text: "Gastar menos com lazer."
+
+		Label:
+			canvas.before:
+				Color:
+					rgba: 1, 1, 1, 0.3
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			font_size: 25
+			font_name: "Corbell"
+			text: "Economizar pelo menos 200 reais todos os meses."
+        
+		BoxLayout:
+			orientation: 'horizontal'
+            Button:
+				background_color:(0.3, 0.8, 1, 1)
+				background: (0.3, 0.8, 1, 1)
+				font_size: 15
+				width: dp(180)
+				height: dp(50)
+				font_name: "Corbell"
+				text: "Adicionar objetivo"
+				
+        BoxLayout:
+			orientation: 'horizontal'
+            Button:
+				background_color:(0.3, 0.8, 1, 1)
+				background: (0.3, 0.8, 1, 1)
+				font_size: 15
+				width: dp(180)
+				height: dp(50)
+				font_name: "Corbell"
+				text: "Tela Inicial"
+				on_press: 
+					root.manager.current = 'Telainicial'
