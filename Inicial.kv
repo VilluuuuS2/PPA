@@ -7,7 +7,7 @@
 	BoxLayout:
 		canvas.before:
             Color:
-                rgba: 0, 255, 255, 0.5
+                rgba: 255, 255, 255, 255
 			Rectangle:
                 pos: self.pos
                 size: self.size
@@ -19,11 +19,15 @@
 			font_size: 30
 			font_name: "Corbell"
 			text: "Seu saldo:"
+			color: [0,255,255,0.5]
+			markup: True
 		Label:
 			font_size: 20
 			font_name: "Corbell"
 			text: "0"
 			id: saldo
+			color: [0,255,255,0.5]
+			markup: True
 
 		BoxLayout:
 			orientation: 'horizontal'
@@ -31,20 +35,28 @@
 				font_size: 20
 				font_name: "Corbell"
 				text: "Sua receita:"
+				color: [0,255,255,0.5]
+				markup: True
 			Label:
 				font_size: 20
 				font_name: "Corbell"
 				text: "0"
 				id: receite
+				color: [0,255,255,0.5]
+				markup: True
 			Label:
 				font_size: 20
 				font_name: "Corbell"
 				text: "Sua despesa:"
+				color: [0,255,255,0.5]
+				markup: True
 			Label:
 				font_size: 20
 				font_name: "Corbell"
 				text: "0"
 				id: despese
+				color: [0,255,255,0.5]
+				markup: True
 
 		BoxLayout:
 			orientation: 'horizontal'
@@ -54,6 +66,8 @@
 				font_size: 20
 				font_name: "Corbell"
 				text: "Adicionar receita:"
+				color: [0,255,255,0.5]
+				markup: True
 			TextInput:
 				size_hint: 1, None
 				width: dp(200)
@@ -66,6 +80,8 @@
 				font_size: 20
 				font_name: "Corbell"
 				text: "Adicionar Despesa:"
+				color: [0,255,255,0.5]
+				markup: True
 			TextInput:
 				size_hint: 1, None
 				width: dp(200)
