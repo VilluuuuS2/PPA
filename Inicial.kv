@@ -7,7 +7,7 @@
 	BoxLayout:
 		canvas.before:
             Color:
-                rgba: 255, 255, 255, 255
+                rgba: (0.6, 1, 0.6, 1)
 			Rectangle:
                 pos: self.pos
                 size: self.size
@@ -17,45 +17,45 @@
 
 		Label:
 			font_size: 30
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "Seu saldo:"
-			color: [0,255,255,0.5]
+			color: "#2E8B57"
 			markup: True
 		Label:
 			font_size: 20
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "0"
 			id: saldo
-			color: [0,255,255,0.5]
+			color: "#2E8B57"
 			markup: True
 
 		BoxLayout:
 			orientation: 'horizontal'
 			Label:
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Sua receita:"
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 			Label:
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "0"
 				id: receite
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 			Label:
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Sua despesa:"
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 			Label:
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "0"
 				id: despese
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 
 		BoxLayout:
@@ -64,9 +64,9 @@
 				size_hint: 1, None
 				height: dp(50)
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Adicionar receita:"
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 			TextInput:
 				size_hint: 1, None
@@ -78,9 +78,9 @@
 				size_hint: 1, None
 				height: dp(50)
 				font_size: 20
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Adicionar Despesa:"
-				color: [0,255,255,0.5]
+				color: "#2E8B57"
 				markup: True
 			TextInput:
 				size_hint: 1, None
@@ -92,10 +92,10 @@
 		BoxLayout:
 			orientation: 'horizontal'
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 18
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: 'Atualizar saldo'
 				size_hint: 1, None
 				width: dp(180)
@@ -104,10 +104,10 @@
 				on_press: root.clicou1()
 				
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 18
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: 'Dicas'
 				size_hint: 1, None
 				width: dp(180)
@@ -119,34 +119,34 @@
 		BoxLayout:
 			orientation: 'horizontal'
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 15
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Simulações"
 				on_press: 
 					root.manager.current = 'Simule'
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 15
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Relatórios"
 				on_press: 
 					root.manager.current = 'Relate'
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 15
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Objetivo"
 				on_press: 
 					root.manager.current = 'Objetivo'
 			Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 15
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Investimentos"
 				on_press: 
 					root.manager.current = 'Invest'

@@ -2,7 +2,7 @@
     BoxLayout:
 		canvas.before:
             Color:
-                rgba: 0, 255, 255, 0.5
+                rgba: (0.6, 1, 0.6, 1)
 			Rectangle:
                 pos: self.pos
                 size: self.size
@@ -12,61 +12,61 @@
 
 		Label:
 			font_size: 30
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "Dicas"
 
 		Label:
 			canvas.before:
 				Color:
-					rgba: 1, 1, 1, 0.3
+					rgba: 0.1, 0.5, 0.3, 1
 				Rectangle:
 					pos: self.pos
 					size: self.size
 			font_size: 25
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "➨ 10 coisas que geram economia na sua vida!"
 
 		Label:
 			canvas.before:
 				Color:
-					rgba: 1, 1, 1, 0.3
+					rgba: 0.3, 1, 0.6, 1
 				Rectangle:
 					pos: self.pos
 					size: self.size
 			font_size: 25
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "➨ Melhores preços na sua região."
 
 		Label:
 			canvas.before:
 				Color:
-					rgba: 1, 1, 1, 0.3
+					rgba: 0.3, 1, 0.6, 1
 				Rectangle:
 					pos: self.pos
 					size: self.size
 			font_size: 25
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "➨ Formas de conseguir renda-extra."
 
 		Label:
 			canvas.before:
 				Color:
-					rgba: 1, 1, 1, 0.3
+					rgba: 0.3, 1, 0.6, 1
 				Rectangle:
 					pos: self.pos
 					size: self.size
 			font_size: 25
-			font_name: "heavy.otf"
+			font_name: "okine.otf"
 			text: "➨ Como criar um orçamento"
 			
 		BoxLayout:
             Button:
-				background_color:(0.3, 0.8, 1, 1)
-				background: (0.3, 0.8, 1, 1)
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
 				font_size: 15
 				width: dp(180)
 				height: dp(50)
-				font_name: "heavy.otf"
+				font_name: "okine.otf"
 				text: "Tela Inicial"
 				on_press: 
 					root.manager.current = 'Telainicial'
