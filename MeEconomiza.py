@@ -9,6 +9,7 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.image import Image
 from kivy.uix.image import Image
 from kivy.graphics import *
+import json
 
 Builder.load_file("Inicial.kv")
 Builder.load_file("Dicas.kv")
@@ -56,6 +57,14 @@ class Inicial(Screen):
             Receita = 0
         try:
             Despesa = float(self.despesa.text)
+
+            dado_saldo = self.saldo.text                          # Pega o nome que está digitado na tela
+            dado_receite = self.receite.text                  # Pega o telefone que está digitado na tela
+            dado_despese = self.despese.text   
+            arquivo = open("Gravacao.json", "w")                       # Abre o arquivo para gravação
+            dicio = {"saldo1": dado_saldo, "receita1": dado_receite, "despesa1": dado_despese}  # Monta o dicionário na variável `dicio`
+            json.dump(dicio, arquivo)                               # Grava o conteúdo da variável `dicio` no arquivo
+            arquivo.close() 
         except ValueError:
             Despesa = 0
         Receite = float(self.receite.text)
@@ -68,9 +77,36 @@ class Inicial(Screen):
         self.saldo.text = f"{Saldo}"
         self.receite.text = f"{Receite}"
         self.despese.text = f"{Despese}"
+
+
         class MeuApp(App):
             def build(self):
                 return Dicas()
+
+        def __init__(self, **kw):
+
+
+
+            super().__init__(**kw)
+        
+            try:
+                arquivo = open("Gravacao.json", "r")           # Abre o arquivo para leitura
+                dicio = json.load(arquivo)                  # Carrega os dados do arquivo na variável `dicio`
+                self.saldo.text = dicio["saldo1"]          # Escreve o nome no campo de nome
+                self.receite.text = dicio["receita1"]  # Escreve o telefone no campo de telefone
+                self.despese.text = dicio["despesa1"] 
+            except KeyError:
+                # Caso tente abrir uma chave que não existe no dicionário
+                print("===== ERRO: Chave não encontrada. =====")
+            except json.decoder.JSONDecodeError:
+                # Caso o arquivo não esteja no formato JSON
+                print("===== ERRO: O arquivo não está no formato JSON. =====")
+            except FileNotFoundError:
+                # Caso o arquivo ainda não tenha sido criado
+                print("===== ERRO: O arquivo de dados não existe. =====")
+            else:
+                # Por último, fecha o arquivo
+                arquivo.close()
 
 
 if __name__ == '__main__':
