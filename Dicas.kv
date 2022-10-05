@@ -14,50 +14,44 @@
 			font_size: 30
 			font_name: "okine.otf"
 			text: "Dicas"
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 25
-			font_name: "okine.otf"
-			text: "➨ 10 coisas que geram economia na sua vida!"
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 25
-			font_name: "okine.otf"
-			text: "➨ Melhores preços na sua região."
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 25
-			font_name: "okine.otf"
-			text: "➨ Formas de conseguir renda-extra."
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 25
-			font_name: "okine.otf"
-			text: "➨ Como criar um orçamento"
+		BoxLayout:
+			orientation: 'vertical'
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Dicas de economia que ajudam o seu bolso"
+				height: dp(50)
+				on_press: 
+					root.materia1()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Economia local e sua importância."
+				height: dp(50)
+				on_press: 
+					root.materia2()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "8 Maneiras para fazer uma renda extra"
+				height: dp(50)
+				on_press: 
+					root.materia3()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Orçamento empresarial: guia para elaborar o seu em 8 passos"
+				height: dp(50)
+				on_press: 
+					root.materia4()
 			
 		BoxLayout:
             Button:

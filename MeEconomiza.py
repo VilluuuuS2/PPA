@@ -9,15 +9,23 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.image import Image
 from kivy.uix.image import Image
 from kivy.graphics import *
+import webbrowser
 
 Builder.load_file("Inicial.kv")
 Builder.load_file("Dicas.kv")
 Builder.load_file("Invest.kv")
 Builder.load_file("Simule.kv")
 Builder.load_file("Relate.kv")
-Builder.load_file("Objetivo.kv")
 
 class Dicas(Screen):
+    def materia1(self):
+        webbrowser.open("https://gestran.com.br/economia-que-ajuda-o-seu-bolso/")
+    def materia2(self):
+        webbrowser.open("https://acqio.com.br/blog/economia-local-e-sua-importancia/")
+    def materia3(self):
+        webbrowser.open("https://empreendedores.mercadopago.com.br/maneiras-para-fazer-renda-extra")
+    def materia4(self):
+        webbrowser.open("https://blog.contaazul.com/orcamento-empresarial")
     pass
 
 class Invest(Screen):
@@ -29,9 +37,6 @@ class Simule(Screen):
 class Relate(Screen):
     pass
 
-class Objetivo(Screen):
-    pass
-
 class MeuApp(App):
     def build(self):
         sm = ScreenManager()
@@ -40,7 +45,6 @@ class MeuApp(App):
         sm.add_widget(Invest(name='Invest'))
         sm.add_widget(Simule(name='Simule'))
         sm.add_widget(Relate(name='Relate'))
-        sm.add_widget(Objetivo(name='Objetivo'))
         return sm
 
 class Inicial(Screen):
