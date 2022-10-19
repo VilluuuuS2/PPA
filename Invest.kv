@@ -15,49 +15,44 @@
 			font_name: "okine.otf"
 			text: "Investimentos"
 
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 20
-			font_name: "okine.otf"
-			text: "➨ 10 grandes áreas para investir!"
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 20
-			font_name: "okine.otf"
-			text: "➨ Não seja enganado por investimentos falsos."
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 20
-			font_name: "okine.otf"
-			text: "➨ Formas de não sofrer grandes perdas ao investir."
-
-		Label:
-			canvas.before:
-				Color:
-					rgba: 0.1, 0.5, 0.3, 1
-				Rectangle:
-					pos: self.pos
-					size: self.size
-			font_size: 20
-			font_name: "okine.otf"
-			text: "➨ Como começar a investir"
+		BoxLayout:
+			orientation: 'vertical'
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Como começar a investir: um guia para dar os primeiros passos no mercado"
+				height: dp(50)
+				on_press: 
+					root.materia1()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "5 áreas para você investir o seu dinheiro em 2021"
+				height: dp(50)
+				on_press: 
+					root.materia2()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Erros ao investir: 8 coisas para não fazer ao começar nos investimentos"
+				height: dp(50)
+				on_press: 
+					root.materia3()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Descubra como evitar golpes financeiros em investimentos!"
+				height: dp(50)
+				on_press: 
+					root.materia4()
 
 		BoxLayout:
             Button:

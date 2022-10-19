@@ -9,11 +9,8 @@ from kivy.uix.screenmanager import ScreenManager, Screen
 from kivy.core.image import Image
 from kivy.uix.image import Image
 from kivy.graphics import *
-<<<<<<< HEAD
 import webbrowser
-=======
 import json
->>>>>>> 29042c81bd6069749b551b11e3bd48d0e7bc4de8
 
 Builder.load_file("Inicial.kv")
 Builder.load_file("Dicas.kv")
@@ -29,10 +26,18 @@ class Dicas(Screen):
     def materia3(self):
         webbrowser.open("https://empreendedores.mercadopago.com.br/maneiras-para-fazer-renda-extra")
     def materia4(self):
-        webbrowser.open("https://blog.contaazul.com/orcamento-empresarial")
+        webbrowser.open("https://blog.nubank.com.br/orcamento-familiar/")
     pass
 
 class Invest(Screen):
+    def materia1(self):
+        webbrowser.open("https://www.infomoney.com.br/guias/como-comecar-a-investir/")
+    def materia2(self):
+        webbrowser.open("https://www.uninter.com/noticias/5-areas-para-voce-investir-o-seu-dinheiro-em-2021")
+    def materia3(self):
+        webbrowser.open("https://blog.abcbrasil.com.br/erros-ao-investir/")
+    def materia4(self):
+        webbrowser.open("https://blog.abcbrasil.com.br/golpes-financeiros/")
     pass
 
 class Simule(Screen):
