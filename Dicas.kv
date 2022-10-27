@@ -1,0 +1,68 @@
+<Dicas>
+    BoxLayout:
+		canvas.before:
+            Color:
+                rgba: (0.6, 1, 0.6, 1)
+			Rectangle:
+                pos: self.pos
+                size: self.size
+		orientation: 'vertical'
+		padding: 40
+		spacing: 15
+
+		Label:
+			font_size: 30
+			font_name: "okine.otf"
+			text: "Dicas"
+		BoxLayout:
+			orientation: 'vertical'
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Dicas de economia que ajudam o seu bolso"
+				height: dp(50)
+				on_press: 
+					root.materia1()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Economia local e sua importância."
+				height: dp(50)
+				on_press: 
+					root.materia2()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "8 Maneiras para fazer uma renda extra"
+				height: dp(50)
+				on_press: 
+					root.materia3()
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Orçamento familiar simples: como montar o seu"
+				height: dp(50)
+				on_press: 
+					root.materia4()
+			
+		BoxLayout:
+            Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 15
+				width: dp(180)
+				height: dp(50)
+				font_name: "okine.otf"
+				text: "Tela Inicial"
+				size_hint: 1, None
+				height: dp(50)
+				on_press: 
+					root.manager.current = 'Telainicial'
