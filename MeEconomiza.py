@@ -19,6 +19,7 @@ Builder.load_file("Inicial.kv")
 Builder.load_file("Dicas.kv")
 Builder.load_file("Invest.kv")
 Builder.load_file("Relate.kv")
+Builder.load_file("Grafico.kv")
 
 class Dicas(Screen):
     def materia1(self):
@@ -59,6 +60,7 @@ class MeuApp(App):
         sm.add_widget(Dicas(name='Dicas'))
         sm.add_widget(Invest(name='Invest'))
         sm.add_widget(Relate(name='Relate'))
+        sm.add_widget(Grafico(name='Grafico'))
         return sm
 
 class Inicial(Screen):
@@ -95,35 +97,49 @@ class Inicial(Screen):
         self.receite.text = f"{Receite}"
         self.despese.text = f"{Despese}"
 
-
-        class MeuApp(App):
-            def build(self):
-                return Dicas()
-
-        def __init__(self, **kw):
-
-
-
-            super().__init__(**kw)
+class Grafico(Screen):
+    def __init__(self, **kw):
+        super().__init__(**kw)
+        import matplotlib.pyplot as plt
+        import matplotlib.colors as mcolors
+        mes=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+        economia=[150,400,90,50,10,200,60,30,100,0,0,0]
+        fig,ax=plt.subplots(figsize=(7,5))
+        ax.bar(mes,economia,color=['seagreen', 'darkgreen', 'mediumseagreen'])
+        ax.set_title('Valores economizados',fontsize=18)
+        plt.savefig('graph.png')
         
-            try:
-                arquivo = open("Gravacao.json", "r")           # Abre o arquivo para leitura
-                dicio = json.load(arquivo)                  # Carrega os dados do arquivo na variável `dicio`
-                self.saldo.text = dicio["saldo1"]          # Escreve o nome no campo de nome
-                self.receite.text = dicio["receita1"]  # Escreve o telefone no campo de telefone
-                self.despese.text = dicio["despesa1"] 
-            except KeyError:
-                # Caso tente abrir uma chave que não existe no dicionário
-                print("===== ERRO: Chave não encontrada. =====")
-            except json.decoder.JSONDecodeError:
-                # Caso o arquivo não esteja no formato JSON
-                print("===== ERRO: O arquivo não está no formato JSON. =====")
-            except FileNotFoundError:
-                # Caso o arquivo ainda não tenha sido criado
-                print("===== ERRO: O arquivo de dados não existe. =====")
-            else:
-                # Por último, fecha o arquivo
-                arquivo.close()
+
+
+
+        # class MeuApp(App):
+        #     def build(self):
+        #         return Dicas()
+
+        # def __init__(self, **kw):
+
+
+
+        #     super().__init__(**kw)
+        
+        #     try:
+        #         arquivo = open("Gravacao.json", "r")           # Abre o arquivo para leitura
+        #         dicio = json.load(arquivo)                  # Carrega os dados do arquivo na variável `dicio`
+        #         self.saldo.text = dicio["saldo1"]          # Escreve o nome no campo de nome
+        #         self.receite.text = dicio["receita1"]  # Escreve o telefone no campo de telefone
+        #         self.despese.text = dicio["despesa1"] 
+        #     except KeyError:
+        #         # Caso tente abrir uma chave que não existe no dicionário
+        #         print("===== ERRO: Chave não encontrada. =====")
+        #     except json.decoder.JSONDecodeError:
+        #         # Caso o arquivo não esteja no formato JSON
+        #         print("===== ERRO: O arquivo não está no formato JSON. =====")
+        #     except FileNotFoundError:
+        #         # Caso o arquivo ainda não tenha sido criado
+        #         print("===== ERRO: O arquivo de dados não existe. =====")
+        #     else:
+        #         # Por último, fecha o arquivo
+        #         arquivo.close()
 
 
 if __name__ == '__main__':

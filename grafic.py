@@ -7,3 +7,4 @@ ax.bar(mes,economia,color=['seagreen', 'darkgreen', 'mediumseagreen'])
 ax.set_title('Valores economizados',fontsize=18)
 plt.savefig('C:/Users/aluno.INTRAVCA/PPA/PPA/graph.png')
 plt.show()
+
