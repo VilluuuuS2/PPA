@@ -45,8 +45,8 @@ class Invest(Screen):
 
 class Relate(Screen):
     def graficos(self):
-        mes=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-        economia=[150,400,90,50,10,200,60,30,100,0,0,0]
+        mes=['Receita','Despesa','Saldo']
+        economia=[150,400,90]
         fig,ax=plt.subplots(figsize=(7,5))
         ax.bar(mes,economia,color=['seagreen', 'darkgreen', 'mediumseagreen'])
         ax.set_title('Valores economizados',fontsize=18)
@@ -103,7 +103,7 @@ class Grafico(Screen):
         import matplotlib.pyplot as plt
         import matplotlib.colors as mcolors
         mes=['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-        economia=[150,400,90,50,10,200,60,30,100,0,0,0]
+        economia=[150,400,90,50,10,200,60,30,100,50,300,0]
         fig,ax=plt.subplots(figsize=(7,5))
         ax.bar(mes,economia,color=['seagreen', 'darkgreen', 'mediumseagreen'])
         ax.set_title('Valores economizados',fontsize=18)

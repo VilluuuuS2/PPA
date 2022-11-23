@@ -1,4 +1,4 @@
-<Grafico>
+<Relate>
     BoxLayout:
         canvas.before:
             Color:
@@ -15,12 +15,6 @@
             font_size: 30
             font_name: "okine.otf"
             text: "Relatório"
-
-        BoxLayout:
-            AsyncImage:
-                source: "graph.png"
-                width: dp(360)
-                height: dp(350)
                     
         BoxLayout:
             Button:
@@ -35,3 +29,16 @@
 				height: dp(50)
                 on_press: 
                     root.manager.current = 'Telainicial'
+
+            Button:
+                background_color:(0.1, 0.5, 0.3, 1)
+                background: (0.1, 0.5, 0.3, 1)
+                font_size: 15
+                width: dp(180)
+                height: dp(50)
+                font_name: "okine.otf"
+                text: "Visualizar gráficos"
+                size_hint: 1, None
+				height: dp(50)
+                on_press:
+                    root.manager.current = 'Grafico'
