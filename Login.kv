@@ -1,0 +1,55 @@
+<Login>
+	BoxLayout:
+		canvas.before:
+            Color:
+                rgba: (0.6, 1, 0.6, 1)
+			Rectangle:
+                pos: self.pos
+                size: self.size
+		orientation: 'vertical'
+		padding: 30
+		spacing: 5
+    
+    BoxLayout:
+			orientation: 'vertical'
+			Label:
+				size_hint: 1, None
+				height: dp(50)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Usuário"
+				color: "#2E8B57"
+				markup: True
+			TextInput:
+				size_hint: 1, None
+				width: dp(200)
+				height: dp(50)
+				pos_hint: {"center_x": .5}
+			Label:
+				size_hint: 1, None
+				height: dp(50)
+				font_size: 20
+				font_name: "okine.otf"
+				text: "Senha"
+				color: "#2E8B57"
+				markup: True
+			TextInput:
+				size_hint: 1, None
+				width: dp(200)
+				height: dp(50)
+				pos_hint: {"center_x": .5}
+    
+    BoxLayout:
+			orientation: 'horizontal'
+			Button:
+				background_color:(0.1, 0.5, 0.3, 1)
+				background: (0.1, 0.5, 0.3, 1)
+				font_size: 18
+				font_name: "okine.otf"
+				text: 'Entrar'
+				size_hint: 1, None
+				width: dp(180)
+				height: dp(50)
+				pos_hint: {"center_x": .5}
+				on_press:
+                    root.manager.current = 'Telainicial'

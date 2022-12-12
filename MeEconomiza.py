@@ -15,6 +15,7 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import json
 
+Builder.load_file("Login.kv")
 Builder.load_file("Inicial.kv")
 Builder.load_file("Dicas.kv")
 Builder.load_file("Invest.kv")
@@ -53,9 +54,13 @@ class Relate(Screen):
         plt.show()
     pass
 
+class Login(Screen):
+    pass
+
 class MeuApp(App):
     def build(self):
         sm = ScreenManager()
+        sm.add_widget(Login(name='Login'))
         sm.add_widget(Inicial(name='Telainicial'))
         sm.add_widget(Dicas(name='Dicas'))
         sm.add_widget(Invest(name='Invest'))

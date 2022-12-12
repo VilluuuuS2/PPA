@@ -15,13 +15,13 @@ import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors
 import json
 
-Builder.load_file("Inicial.kv")
-Builder.load_file("Dicas.kv")
-Builder.load_file("Invest.kv")
-Builder.load_file("Relate.kv")
-Builder.load_file("Grafico.kv")
+Builder.load_file("InicialEs.kv")
+Builder.load_file("DicasEs.kv")
+Builder.load_file("InvestEs.kv")
+Builder.load_file("RelateEs.kv")
+Builder.load_file("GraficoEs.kv")
 
-class Dicas(Screen):
+class DicasEs(Screen):
     def materia1(self):
         webbrowser.open("https://www.microsip.com/blogs/12-tips-para-mejorar-la-salud-de-tu-bolsillo")
     def materia2(self):
@@ -32,7 +32,7 @@ class Dicas(Screen):
         webbrowser.open("https://preahorro.com/finanzas-personales/elaborar-un-presupuesto-equilibrado/")
     pass
 
-class Invest(Screen):
+class InvestEs(Screen):
     def materia1(self):
         webbrowser.open("https://www.thepowermba.com/es/blog/como-empezar-a-invertir-guia-para-dar-tus-primeros-pasos")
     def materia2(self):
@@ -43,7 +43,7 @@ class Invest(Screen):
         webbrowser.open("https://www.tn.gov/attorneygeneral/working-for-tennessee/consumer/resources/materials/investment-scams-sp.html")
     pass
 
-class Relate(Screen):
+class RelateEs(Screen):
     def graficos(self):
         mes=['Receita','Despesa','Saldo']
         economia=[150,400,90]
@@ -56,14 +56,14 @@ class Relate(Screen):
 class MeuApp(App):
     def build(self):
         sm = ScreenManager()
-        sm.add_widget(Inicial(name='Telainicial'))
-        sm.add_widget(Dicas(name='Dicas'))
-        sm.add_widget(Invest(name='Invest'))
-        sm.add_widget(Relate(name='Relate'))
-        sm.add_widget(Grafico(name='Grafico'))
+        sm.add_widget(InicialEs(name='Telainicial'))
+        sm.add_widget(DicasEs(name='Dicas'))
+        sm.add_widget(InvestEs(name='Invest'))
+        sm.add_widget(RelateEs(name='Relate'))
+        sm.add_widget(GraficoEs(name='Grafico'))
         return sm
 
-class Inicial(Screen):
+class InicialEs(Screen):
     receita = ObjectProperty(None)
     despesa = ObjectProperty(None)
     receite = ObjectProperty(None)
@@ -97,7 +97,7 @@ class Inicial(Screen):
         self.receite.text = f"{Receite}"
         self.despese.text = f"{Despese}"
 
-class Grafico(Screen):
+class GraficoEs(Screen):
     def __init__(self, **kw):
         super().__init__(**kw)
         import matplotlib.pyplot as plt
